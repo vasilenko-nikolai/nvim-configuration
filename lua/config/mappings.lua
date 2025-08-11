@@ -3,8 +3,6 @@ vim.g.mapleader = " "
 
 -- Горячая клавиша вставки (inoremap jk <esc>)
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
--- Горячая клавиша вставки (inoremap jk <esc>)
-vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 -- NeoTree
 vim.keymap.set('n', '<leader>e', ':Neotree<CR>')
