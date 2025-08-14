@@ -8,7 +8,7 @@ vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>e', ':Neotree<CR>')
 vim.keymap.set('n', '<leader>o', ':Neotree close<CR>')
 
-
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 -- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
