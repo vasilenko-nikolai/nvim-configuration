@@ -40,7 +40,4 @@ vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 
 
-local swenv_api = require('swenv.api')
-vim.keymap.set('n', '<leader>sv', swenv_api.pick_venv())
-vim.keymap.set('n', '<leader>cv', swenv_api.get_current_venv())
-vim.keymap.set('n', '<leader>av', swenv_api.auto_venv())
+vim.keymap.set('n', '<leader>sv', '<cmd>VenvSelect<CR>')
