@@ -7,6 +7,9 @@ return {
             lspconfig.rust_analyzer.setup({})
             lspconfig.pyright.setup({})
             lspconfig.postgres_lsp.setup({})
+            lspconfig.emmet_ls.setup({
+                cmd = {"emmet-language-server", "--stdio"},
+            })
             lspconfig.ts_ls.setup({})
 		end,
 	},

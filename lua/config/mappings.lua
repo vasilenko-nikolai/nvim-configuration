@@ -24,6 +24,8 @@ vim.keymap.set('n', 'gr', builtin.lsp_references,
                {noremap = true, silent = true})
 vim.keymap.set('n', 'gd', builtin.lsp_definitions,
                {noremap = true, silent = true})
+vim.keymap.set('n', 'gi', builtin.lsp_implementations,
+               {noremap = true, silent = true})
 
 -- Buffline
 -- Tabs
@@ -36,3 +38,6 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
 vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
+
+
+vim.keymap.set('n', '<leader>sv', '<cmd>VenvSelect<CR>')
