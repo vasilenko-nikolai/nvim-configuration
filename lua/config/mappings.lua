@@ -29,10 +29,11 @@ vim.keymap.set('n', 'gi', builtin.lsp_implementations,
 
 -- Buffline
 -- Tabs
-vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
-vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>te', ':tabe<CR>')
+vim.keymap.set('n', '<leader>tn', ':tabn<CR>')
+vim.keymap.set('n', '<leader>tp', ':tabp<CR>')
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>')
+vim.keymap.set('n', '<leader>to', ':tabonly<CR>')
 
 -- Terminal
 vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
