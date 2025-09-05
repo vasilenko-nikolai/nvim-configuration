@@ -42,3 +42,34 @@ vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 
 
 vim.keymap.set('n', '<leader>sv', '<cmd>VenvSelect<CR>')
+
+
+-- mapping Breakpoint for debbugger
+dap = require('dap')
+vim.keymap.set('n', '<leader>dc', function() dap.continue() end)
+vim.keymap.set('n', '<leader>', function() dap.step_over() end)
+vim.keymap.set('n', '<F11>', function() dap.step_into() end)
+vim.keymap.set('n', '<F12>', function() dap.step_out() end)
+vim.keymap.set('n', '<leader>b', function() dap.toggle_breakpoint() end)
+vim.keymap.set('n', '<leader>B', function() dap.set_breakpoint() end)
+vim.keymap.set('n', '<leader>lp', function() dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+vim.keymap.set('n', '<leader>dr', function() dap.repl.open() end)
+vim.keymap.set('n', '<leader>dl', function() dap.run_lasS() end)
+vim.keymap.set({'n', 'v'}, '<leader>dh', function()
+  require('dap.ui.widgets').hover()
+end)
+vim.keymap.set({'n', 'v'}, '<Leader>dp', function()
+  require('dap.ui.widgets').preview()
+end)
+vim.keymap.set('n', '<Leader>df', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.frames)
+end)
+ 
+
+-- mapping for translate
+vim.keymap.set('v', 'mr', ':Translate RU<CR>')
+vim.keymap.set('v', 'me', ':Translate EN<CR>')
+
+vim.keymap.set('v', 'Mr', ':Translate RU -output=replace<CR>')
+vim.keymap.set('v', 'Me', ':Translate EN -output=replace<CR>')
