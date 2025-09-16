@@ -45,3 +45,20 @@ end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
+vim.api.nvim_create_autocmd("User", {
+  pattern = "GoyoEnter",
+  callback = function()
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+  end,
+})
+
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "GoyoLeave",
+  callback = function()
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+  end,
+})
+

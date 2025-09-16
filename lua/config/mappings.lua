@@ -27,7 +27,10 @@ vim.keymap.set('n', 'gd', builtin.lsp_definitions,
 vim.keymap.set('n', 'gi', builtin.lsp_implementations,
                {noremap = true, silent = true})
 
--- Buffline
+-- Buff
+vim.keymap.set('n', '<leader>bn', ':bn<CR>')
+vim.keymap.set('n', '<leader>bp', ':bp<CR>')
+vim.keymap.set('n', '<leader>bc', ':bclose<CR>')
 -- Tabs
 vim.keymap.set('n', '<leader>te', ':tabe<CR>')
 vim.keymap.set('n', '<leader>tn', ':tabn<CR>')
