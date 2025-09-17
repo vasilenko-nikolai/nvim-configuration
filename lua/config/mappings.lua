@@ -68,7 +68,10 @@ vim.keymap.set('n', '<Leader>df', function()
   local widgets = require('dap.ui.widgets')
   widgets.centered_float(widgets.frames)
 end)
- 
+
+
+--mapping show errors
+vim.keymap.set('n', '<leader>se', vim.diagnostic.open_float)
 
 -- mapping for translate
 vim.keymap.set('v', 'mr', ':Translate RU<CR>')
