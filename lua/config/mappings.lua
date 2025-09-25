@@ -30,7 +30,8 @@ vim.keymap.set('n', 'gi', builtin.lsp_implementations,
 -- Buff
 vim.keymap.set('n', '<leader>bn', ':bn<CR>')
 vim.keymap.set('n', '<leader>bp', ':bp<CR>')
-vim.keymap.set('n', '<leader>bc', ':bclose<CR>')
+vim.keymap.set('n', '<leader>bd', ':bd<CR>')
+vim.keymap.set('n', '<leader>bt', ':b#<CR>')
 -- Tabs
 vim.keymap.set('n', '<leader>te', ':tabe<CR>')
 vim.keymap.set('n', '<leader>tn', ':tabn<CR>')

@@ -61,5 +61,4 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 --     vim.opt.relativenumber = true
 --   end,
 -- })
-
 vim.g.goyo_linenr = 1
