@@ -60,3 +60,5 @@ vim.lsp.enable('pyright')
 vim.lsp.enable('gopls')
 vim.lsp.enable('vtsls')
 vim.lsp.enable('emmet_language_server')
+vim.lsp.enable('postgres_lsp')
+

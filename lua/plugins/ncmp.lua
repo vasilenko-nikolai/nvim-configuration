@@ -1,4 +1,27 @@
 return {
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        config = function()
+            local luasnip = require('luasnip')
+            require("luasnip.loaders.from_vscode").lazy_load({
+                paths = { table.concat({vim.fn.stdpath("config"), "snippets"}, "/")}
+            })
+            
+            vim.keymap.set({ "i", "s" }, "<C-j>", function()
+                    if luasnip.expand_or_jumpable() then
+                      luasnip.expand_or_jump()
+                    end
+            end, { silent = true })
+
+            vim.keymap.set({ "i", "s" }, "<C-k>", function()
+                if luasnip.jumpable(-1) then
+                  luasnip.jump(-1)
+                end
+            end, { silent = true })
+        end
+    },
 	{
 		"hrsh7th/nvim-cmp",
 		version = false, -- last release is way too old
@@ -7,6 +30,7 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
+            "saadparwaiz1/cmp_luasnip",
 		},
 		-- Not all LSP servers add brackets when completing a function.
 		-- To better deal with this, LazyVim adds a custom option to cmp,
@@ -45,7 +69,7 @@ return {
 				sources = cmp.config.sources({
                   { name = 'nvim_lsp' },
                   { name = 'vsnip' }, -- For vsnip users.
-                  -- { name = 'luasnip' }, -- For luasnip users.
+                  { name = 'luasnip' }, -- For luasnip users.
                   -- { name = 'ultisnips' }, -- For ultisnips users.
                   -- { name = 'snippy' }, -- For snippy users.
                   { name = 'buffer' },
@@ -56,3 +80,4 @@ return {
 		end,
 	},
 }
+

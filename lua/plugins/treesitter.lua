@@ -12,7 +12,8 @@ return {
                     "lua",
                     "go",
                     "javascript",
-                    "python"
+                    "python",
+                    "vue"
                 },
                 sync_install = false,
                 auto_install = true,
