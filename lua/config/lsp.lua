@@ -53,10 +53,39 @@ vim.lsp.config("vtsls", {
     end,
 })
 
+vim.lsp.config("vue_ls", {
+    settings = {
+        vue = {
+            complete = { casing = { props = "auto" } },
+            format = { enable = false },
+            telemetry = { enable = false },
+            languageFeatures = {
+                implementation = true,
+                references = true,
+                definition = true,
+                typeDefinition = true,
+                callHierarchy = true,
+                hover = true,
+                rename = true,
+                signatureHelp = true,
+                codeAction = true,
+                completion = {
+                    defaultTagNameCase = "both",
+                    defaultAttrNameCase = "kebabCase",
+                },
+            },
+        },
+    },
+})
 
+vim.lsp.config("cssls", {})
 
 -- enable
 vim.lsp.enable('pyright')
 vim.lsp.enable('gopls')
 vim.lsp.enable('vtsls')
+vim.lsp.enable('vue_ls')
+vim.lsp.enable('cssls')
 vim.lsp.enable('emmet_language_server')
+vim.lsp.enable('postgres_lsp')
+

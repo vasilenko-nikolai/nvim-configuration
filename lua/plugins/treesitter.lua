@@ -12,7 +12,10 @@ return {
                     "lua",
                     "go",
                     "javascript",
-                    "python"
+                    "python",
+                    "vue",
+                    "css",
+                    "scss"
                 },
                 sync_install = false,
                 auto_install = true,

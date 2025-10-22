@@ -1,0 +1,36 @@
+{
+    "file function": {
+        "prefix": "ffn",
+        "description": "create and export function for file",
+        "body": [
+            "",
+            "export const $TM_FILENAME_BASE = ($1) => {",
+            "   $2",
+            "}"
+        ]
+    },
+    "async file function": {
+        "prefix": "affn",
+        "description": "create and export async function for file",
+        "body": [
+            "",
+            "export const $TM_FILENAME_BASE = async ($1) => {",
+            "   $2",
+            "}"
+        ]
+    },
+    "const ussualy function": {
+        "prefix": "afn",
+        "description": "ussualy const arrow function",
+        "body": [
+            "const $1 = ($2) => {$3}"
+        ]
+    },
+    "const async function": {
+        "prefix": "aafn",
+        "description": "async const arrow function",
+        "body": [
+            "const $1 = async ($2) => {$3}"
+        ]
+    }
+}

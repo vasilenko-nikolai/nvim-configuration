@@ -1,0 +1,30 @@
+{
+  "Vue TS SCSS Template": {
+    "prefix": "vuets3",
+    "description": "Create standard Vue file template",
+    "body": [
+        "<script setup lang=\"ts\">",
+        "interface ${TM_FILENAME_BASE}Props {",
+        "}",
+        "",
+        "",
+        "interface ${TM_FILENAME_BASE}Events {",
+        "}",
+        "",
+        "defineProps<${TM_FILENAME_BASE}Props>();",
+        "defineEmits<${TM_FILENAME_BASE}Events>();",
+        "",
+        "",
+        "$1",
+        "</script>",
+        "",
+        "<template>",
+        "",
+        "</template>",
+        "",
+        "<style lang=\"scss\" module=\"classes\">",
+        ".$TM_FILENAME_BASE {}",
+        "</style>"
+    ]
+  }
+}
