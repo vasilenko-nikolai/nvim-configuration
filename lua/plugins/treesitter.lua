@@ -13,7 +13,9 @@ return {
                     "go",
                     "javascript",
                     "python",
-                    "vue"
+                    "vue",
+                    "css",
+                    "scss"
                 },
                 sync_install = false,
                 auto_install = true,
