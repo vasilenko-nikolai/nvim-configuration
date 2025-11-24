@@ -14,6 +14,7 @@ return {
                 window = {
                     -- max_width = 35,
                     -- width = .19,
+                    position = "right",
                 },
             })
         end
