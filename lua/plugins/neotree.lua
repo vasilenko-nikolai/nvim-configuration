@@ -12,8 +12,6 @@ return {
             local conf = require('neo-tree')
             conf.setup({
                 window = {
-                    -- max_width = 35,
-                    -- width = .19,
                     position = "right",
                 },
             })
