@@ -33,7 +33,6 @@ vim.opt.splitright = true
 
 -- Настройка blamer
 vim.g.blamer_enabled = true
-vim.g.blamer_date_format = '%d.%m.%y %H:%M'
 
 vim.diagnostic.config({ virtual_text = true })
 vim.o.background = dark
