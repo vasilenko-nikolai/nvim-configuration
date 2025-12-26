@@ -21,13 +21,21 @@
       "body": [
           "def $1($2):",
           "    $3"
-      ],
+      ]
   },
   "async function": {
       "prefix": "afn",
       "description": "create async function",
       "body": [
           "async def $1($2):",
+          "    $3"
+      ]
+  },
+  "__main__": {
+      "prefix": "main",
+      "description": "create if __name__ == __main__",
+      "body": [
+          "if __name__ == '__main__':",
           "    $3"
       ]
   }
